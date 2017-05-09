@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Special+Elite');
+body {
+	background-color: #fafafa;
+	margin: 0;
+	font-family: 'Roboto Light', sans-serif;
+	color: #222;
+	font-size: 150%;
+	/*background-image: url('img/wood.jpg');*/
+	/*background-repeat: repeat-y ;*/
+	/*background-size: 100%;*/
+}
+div.background_image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	background-image: url('img/wood.jpg');
+	background-repeat: repeat-y ;
+	background-size: 100%;
+	filter: blur(1px);
+}
+
+h1, h4 {
+	font-size: 3em;
+	font-family: 'Special Elite', sans-serif;
+	color: #333;
+	margin-bottom: 0.6em;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	/*border-bottom: 1px solid #8A5E20;*/
+}
+h4 {
+	font-size: 1.5em;
+}
+@media (min-width: 628px){
+	h1{
+		font-size: 4em;
+	}
+}
+hr {
+	border: 1px solid #8A5E20;
+}
+ul#beer_list {
+	list-style: none;
+	padding: 0;
+}
+.beer_button {
+	position: relative;
+	float: left;
+	width: 47vw;
+	height: 47vw;
+	margin: 0.5vw;
+	border: 1px solid rgba(0,0,0,0.35);
+	border-radius: 10%;
+	background-color: rgba(0,0,0,0.25);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	transition: all 0.2s;
+}
+@media (min-width: 628px){
+	.beer_button{
+		width: 24vw;
+		height: 24vw;
+		margin: 0.2vw;
+	}
+}
+.beer_button > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	max-height: 80%;
+	margin: 10% 10%;
+	-webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+	pointer-events: none;
+}
+.beer_button:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+}
+
+.beer_label{
+	font-weight: 700;
+	font-size: 1.2em;
+}
+.beer_info {
+	position: fixed;
+	z-index:1;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	padding-top: 10%;
+	padding-left: 3%;
+	padding-right: 3%;
+	font-size: 1.5em;
+	overflow-y: auto;
+	background-color: rgba(230,230,230, 0.93);
+	margin-bottom: 0.5em;
+}
+.beer_info > a{
+	margin-top: 1em;
+	width: 100%;
+	white-space: nowrap;
+	box-sizing: border-box;
+	display: inline-block;
+	overflow: hidden;
+	/*text-wrap: none;*/
+	text-overflow: ellipsis;
+}
+.beer_info {
+	top: 0;
+	transition: top 0.3s ease;
+}
+.beer_info.collapsed {
+	top: 100vh;
+}
+
+span.closer {
+	position: absolute;
+	top: 0;
+	right: 3vw;
+	font-size: 12vw;
+}
+@media (min-width: 628px){
+	span.closer{
+		font-size: 8vw;
+	}
+}
+.stats > span {
+	margin-top: 0.5em;
+	display: block;
+}
