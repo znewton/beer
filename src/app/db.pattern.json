@@ -10,8 +10,9 @@
           "IBU": 0.6,
           "ABV": 0.045 // ...
         },
-        "url": "beer.co/pale_ale/info",
-        "image_url": "beer.co/pale_ale.jpg"
+        "info_url": "beer.co/pale_ale/info",
+        "image_url": "beer.co/pale_ale.jpg",
+        "brewery_image_url": "beer.co/logo.jpg"
       } // ...
     } // ...
   },
@@ -26,8 +27,9 @@
           "IBU": 0.6,
           "ABV": 0.045 // ...
         },
-        "url": "beer.co/pale_ale/info",
-        "image_url": "beer.co/pale_ale.jpg"
+        "info_url": "beer.co/pale_ale/info",
+        "image_url": "beer.co/pale_ale.jpg",
+        "brewery_image_url": "beer.co/logo.jpg"
       } // ...
     } // ...
   },
