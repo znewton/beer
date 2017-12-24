@@ -6,7 +6,7 @@ if [ -z $CNAME ]; then
     exit
 fi
 cd ./src
-DIR="./"
+DIR="."
 COMP_DIR="$DIR/$CNAME"
 if [ -d "$COMP_DIR" ]; then
     echo ""
@@ -21,7 +21,7 @@ mkdir "$COMP_DIR"
 JSX="$COMP_DIR/$CNAME.jsx"
 touch "$JSX"
 SCSS="$COMP_DIR/$CNAME.scss"
-touch "$CSS"
+touch "$SCSS"
 TEST="$COMP_DIR/$CNAME.test.js"
 touch "$TEST"
 
@@ -31,7 +31,6 @@ SNAKE_CNAME=$(echo "$FIRST_LOWER_CNAME" | sed 's/\([A-Z]\)/-\1/g' | awk '{print 
 
 cat > "$JSX" << JSX
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './${CNAME}.css';
 
 class ${CNAME} extends Component {
