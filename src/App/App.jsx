@@ -10,10 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <Nav></Nav>
+        <div className="beer-grid">
         {beers.map(beer => <BeerCard
             key={beer.label}
             beer={beer}
           ></BeerCard>)}
+        </div>
       </div>
     );
   }

@@ -1,3 +1,78 @@
+@import '../sass/mixins';
+@import '../sass/globals';
+
 .beer-card {
+  display: inline-block;
+  background-color: #fff;
+  $width: 20rem;
+  margin: 1rem;
+  text-align: center;
+  & > *:not(.beer-more-info) {
+    padding: 0 0.5rem;
+  }
+  @include box-shadow(2px 3px 8px rgba(black, 0.3));
+  @include transition(box-shadow 125ms ease);
+  &:hover {
+    cursor: pointer;
+    @include box-shadow(2px 3px 15px rgba(black, 0.3));
+    .beer-more-info {
+      opacity: 1;
+    }
+  }
+  width: $width;
+  .beer-img {
+    background-color: #fff;
+    width: $width;
+    padding: 0.5rem;
+    height: $width*2/3;
+    text-align: center;
+    vertical-align: center;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .beer-label {
+    border-top: 1px solid #dfdfdf;
+    padding: 0;
+    margin: 0 0.5rem;
+    padding-top: 0.3rem;
+    font-size: 1.1em;
+  }
+  .beer-style {
+    color: #888;
+    font-style: italic;
+    min-height: 1em;
+  }
+  .beer-more-info {
+    margin-top: 0.5rem;
+    text-align: center; 
+    padding: 0.4rem;
+    background-color: $blue;
+    opacity: 0.75;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(black,0.2);
+    @include transition(opacity 125ms ease);
+    span {
+      $size: 0.75rem;
+      display: inline-block;
+      height: $size;
+      width: $size;
+      border-radius: 100%;
+      background-color: #fff;
+      margin: 0 $size*2/3;
+    }
+  }
+  .Modal .modal {
+    max-width: 90vw;
+  }
+  .Modal p span {
+    color: #888;
+  }
+  .beer-info-footer {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    text-align: center;
+  }
 }
 

@@ -18,13 +18,18 @@
   transform-origin: middle center;
   background-color: transparent;
   transform: scale(0);
-  @include transition(transform 125ms ease, background-color 50ms ease 0ms);
+  @include transition(transform 0 ease 125ms, background-color 50ms ease 0ms);
   &.open {
     background-color: rgba(black, 0.3);
     transform: scale(1);
-    @include transition(transform 125ms ease, background-color 50ms ease 75ms);
+    @include transition(transform 0 ease 125ms, background-color 50ms ease 75ms);
+    .modal {
+      transform: scale(1);
+      @include transition(transform 125ms ease);      
+    }
   }
   .modal {
+    transform: scale(0);
     align-self: center;
     line-height: 1em;
     text-align: left;
@@ -34,6 +39,7 @@
     background-color: #fff;
     padding: 0.3em 0.5em;
     overflow: hidden;
+    @include transition(transform 125ms ease);          
     @include box-shadow(1px 1px 6px rgba(black, 0.3));
     @include bp-large {
       min-width: 60vw;

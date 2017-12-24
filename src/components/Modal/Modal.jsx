@@ -27,6 +27,7 @@ export default class Modal extends Component {
     if(this.props.open) {
       document.body.style.overflow = "hidden";
     } else {
+      document.body.style.overflow = "auto";
       delete document.body.style.overflow;
     }
     return (
@@ -66,7 +67,7 @@ Modal.propTypes = {
     PropTypes.element,
   ]),
   handleClose: PropTypes.func.isRequired,
-}
+};
 
 Modal.defaultProps = {
   open: false,
